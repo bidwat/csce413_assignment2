@@ -1,0 +1,4 @@
+Found 3 open ports
+Target: 172.20.0.1 | Port 5001: open (0.0057s) | Service: http | Banner: Server: Werkzeug/3.1.5 Python/3.11.14
+Target: 172.20.0.10 | Port 5000: open (0.0205s) | Service: http | Banner: Server: Werkzeug/3.1.5 Python/3.11.14
+Target: 172.20.0.40 | Port 5678: open (0.1130s) | Service: null | Banner: null

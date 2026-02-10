@@ -1,5 +1,7 @@
-#!/usr/bin/env python3
-"""Starter template for the port knocking client."""
+"""
+Sends TCP connection attempts (knocks) to the target knock ports.
+checks whether the protected port becomes reachable afterward.
+"""
 
 import argparse
 import socket
@@ -10,27 +12,26 @@ DEFAULT_PROTECTED_PORT = 2222
 DEFAULT_DELAY = 0.3
 
 
-def send_knock(target, port, delay):
-    """Send a single knock to the target port."""
-    # TODO: Choose UDP or TCP knocks based on your design.
-    # Example TCP knock stub:
+def send_knock(target: str, port: int, delay: float):
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    sock.settimeout(0.5)
     try:
-        with socket.create_connection((target, port), timeout=1.0):
-            pass
-    except OSError:
+        sock.connect((target, port))
+    except Exception:
+        # We only care that a connection attempt happened.
         pass
+    finally:
+        sock.close()
+
     time.sleep(delay)
 
 
-def perform_knock_sequence(target, sequence, delay):
-    """Send the full knock sequence."""
-    for port in sequence:
-        send_knock(target, port, delay)
+def perform_knock_sequence(target: str, sequence, delay: float):
+    for p in sequence:
+        send_knock(target, p, delay)
 
 
-def check_protected_port(target, protected_port):
-    """Try connecting to the protected port after knocking."""
-    # TODO: Replace with real service connection if needed.
+def check_protected_port(target: str, protected_port: int):
     try:
         with socket.create_connection((target, protected_port), timeout=2.0):
             print(f"[+] Connected to protected port {protected_port}")
@@ -39,30 +40,16 @@ def check_protected_port(target, protected_port):
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="Port knocking client starter")
+    parser = argparse.ArgumentParser(description="Port knocking client")
     parser.add_argument("--target", required=True, help="Target host or IP")
     parser.add_argument(
         "--sequence",
         default=",".join(str(port) for port in DEFAULT_KNOCK_SEQUENCE),
         help="Comma-separated knock ports",
     )
-    parser.add_argument(
-        "--protected-port",
-        type=int,
-        default=DEFAULT_PROTECTED_PORT,
-        help="Protected service port",
-    )
-    parser.add_argument(
-        "--delay",
-        type=float,
-        default=DEFAULT_DELAY,
-        help="Delay between knocks in seconds",
-    )
-    parser.add_argument(
-        "--check",
-        action="store_true",
-        help="Attempt connection to protected port after knocking",
-    )
+    parser.add_argument("--protected-port", type=int, default=DEFAULT_PROTECTED_PORT)
+    parser.add_argument("--delay", type=float, default=DEFAULT_DELAY)
+    parser.add_argument("--check", action="store_true")
     return parser.parse_args()
 
 

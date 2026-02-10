@@ -1,0 +1,59 @@
+.venv
+# Standard Gitignore for Python and Java
+
+# == OS-specific files ==
+.DS_Store # macOS
+Thumbs.db # Windows
+# ... other OS-generated files
+
+# == Compiled Python files ==
+*.py[co]
+__pycache__/
+# ... other compiled files
+
+# == Python virtual environments ==
+.venv/
+venv/
+env/
+# ... other environment folder names
+
+# == Python packaging and distribution ==
+build/
+dist/
+develop-eggs/
+*.egg-info/
+# ... other packaging files
+
+# == Environment variables and sensitive data ==
+.env
+# ... other sensitive files
+
+# == Compiled Java files ==
+*.class
+# ... other compiled files
+
+# == Java packaging and distribution ==
+*.jar
+*.war
+*.ear
+# ... other archive files
+
+# == Maven build artifacts ==
+target/
+# ... other Maven specific folders
+
+# == Gradle build artifacts ==
+.gradle/
+/build/
+# Ignore Gradle wrapper jar file, but not the wrapper itself
+!gradle-wrapper.jar
+.gradletasknamecache
+
+# == IDE-specific files and folders ==
+.idea/         # IntelliJ IDEA
+.vscode/       # Visual Studio Code
+*.iws         # Eclipse/IntelliJ workspace files
+.project       # Eclipse project file
+.settings/     # Eclipse settings folder
+.classpath     # Eclipse classpath file
+# ... other IDE specific files

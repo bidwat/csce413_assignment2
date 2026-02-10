@@ -1,0 +1,9 @@
+Found 7 open ports
+Target: 172.20.0.1 | Port 111: open (0.0058s) | Service: null | Banner: null
+Target: 172.20.0.1 | Port 5001: open (0.0106s) | Service: http | Banner: Server: Werkzeug/3.1.5 Python/3.11.14
+Target: 172.20.0.10 | Port 5000: open (0.0358s) | Service: http | Banner: Server: Werkzeug/3.1.5 Python/3.11.14
+Target: 172.20.0.11 | Port 3306: open (0.0714s) | Service: null | Banner: J
+8.0.45IP?}]>MZ{1ZtPFjmysql_native_password
+Target: 172.20.0.20 | Port 2222: open (0.1127s) | Service: ssh | Banner: SSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.13
+Target: 172.20.0.21 | Port 8888: open (0.0222s) | Service: http | Banner: Server: Werkzeug/3.1.5 Python/3.11.14
+Target: 172.20.0.22 | Port 6379: open (0.0918s) | Service: null | Banner: null

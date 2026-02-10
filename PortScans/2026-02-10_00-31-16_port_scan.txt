@@ -1,0 +1,10 @@
+[+] Found 8 open ports
+Target: 172.20.0.1 | Port 111: open (0.0069s) | Service: null | Banner: null
+Target: 172.20.0.1 | Port 5001: open (0.1131s) | Service: http | Banner: Server: Werkzeug/3.1.5 Python/3.11.14
+Target: 172.20.0.10 | Port 5000: open (0.0181s) | Service: http | Banner: Server: Werkzeug/3.1.5 Python/3.11.14
+Target: 172.20.0.11 | Port 3306: open (0.0308s) | Service: null | Banner: J
+8.0.45zG]O12}%+[Bxr.+vmysql_native_password
+Target: 172.20.0.20 | Port 2222: open (0.0455s) | Service: ssh | Banner: SSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.13
+Target: 172.20.0.21 | Port 8888: open (0.1075s) | Service: http | Banner: Server: Werkzeug/3.1.5 Python/3.11.14
+Target: 172.20.0.22 | Port 6379: open (0.0544s) | Service: null | Banner: null
+Target: 172.20.0.237 | Port 4517: open (0.1256s) | Service: null | Banner: null
