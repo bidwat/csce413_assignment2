@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e38b6322-25ed-4d8c-98fa-ab83acc27f0e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../mitm/artifacts/mysql_3306.pcap" beforeDir="false" afterPath="$PROJECT_DIR$/../../../mitm/artifacts/mysql_3306.pcap" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

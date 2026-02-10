@@ -1,5 +1,7 @@
-**Author:** Bidwat Raj PokhrelSoftware Security
-**Repository:**
+**Author:** Bidwat Raj Pokhrel
+
+**Repository:** [https://github.com/bidwat/csce413_assignment2](https://github.com/bidwat/csce413_assignment2)  
+**Video:** [https://github.com/bidwat/csce413_assignment2](https://github.com/bidwat/csce413_assignment2)
 
 ---
 
@@ -40,7 +42,7 @@ This assignment evaluates the security of a vulnerable multi-container Docker en
 
 ### Video Link
 
-- **Overall demo and walkthrough:**
+- **Overall demo and walkthrough:** https://youtu.be/L5hNe4EQ4mg
 
 ---
 
@@ -146,10 +148,6 @@ Target: 172.20.0.20 | Port 2222: open (0.1127s) | Service: ssh | Banner: SSH-2.0
 Target: 172.20.0.21 | Port 8888: open (0.0222s) | Service: http | Banner: Server: Werkzeug/3.1.5 Python/3.11.14
 Target: 172.20.0.22 | Port 6379: open (0.0918s) | Service: null | Banner: null
 
-```
-
-```bash
-python3 -m port_scanner --target 172.20.0.0/24 --ports 1-10000 --verbose 0 --output_format json
 ```
 
 ### 2.4 Discovered Services and Their Purposes
@@ -382,11 +380,6 @@ In a real environment, the weaknesses demonstrated here would be serious:
 
 Mitigating this requires both **encryption in transit** and **better secrets handling**, which I address in the recommendations section.
 
-### 3.6 Part 2 Video
-
-- **MITM & token exfiltration demo:**
-  <VIDEO_PART2_LINK>
-
 ---
 
 ## 4. Part 3: Security Fixes
@@ -566,11 +559,6 @@ This script attempts the protected port before and after calling `knock_client.p
   - Integrate logging/alerting for repeated failed sequences.
   - Combine port knocking with additional controls like SSH key-only authentication and IP allowlists.
 
-#### Port Knocking Video
-
-- **Port knocking demo video:**
-  <VIDEO_PART3_LINK>
-
 ---
 
 ### 4.2 Fix 2 — SSH Honeypot
@@ -730,11 +718,6 @@ In `honeypot/analysis.md`, I summarized patterns observed in my test attacks:
 - No successful authentication events, since the honeypot always rejects credentials.
 
 In a real deployment, these patterns would trigger alerts and the offending IPs could be blocked or added to a blacklist.
-
-#### Honeypot Video
-
-- **SSH honeypot demo video:**
-  <VIDEO_PART3_LINK> (or separate link if you recorded it independently)
 
 ---
 
